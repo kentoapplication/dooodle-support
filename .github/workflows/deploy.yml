@@ -56,12 +56,20 @@ jobs:
       # Next.js アプリのビルド（静的サイト生成）
       - name: Build with Next.js
         run: npm run build
+        
+      # 出力ディレクトリの確認（デバッグ用）
+      - name: List build output
+        run: |
+          echo "Contents of current directory:"
+          ls -la
+          echo "Checking for out directory:"
+          ls -la out/ || echo "out directory does not exist"
       
       # ビルド成果物のアップロード
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: /out
+          path: ./out
 
   # デプロイジョブ
   deploy:
@@ -76,4 +84,3 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
-        
