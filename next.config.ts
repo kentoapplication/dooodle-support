@@ -14,6 +14,9 @@ const nextConfig: NextConfig = {
     unoptimized: true
   },
   
+  // 出力ディレクトリ（明示的に指定）
+  distDir: '.next',
+  
   // TypeScript設定
   typescript: {
     ignoreBuildErrors: false,
