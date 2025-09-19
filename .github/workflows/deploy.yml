@@ -1,20 +1,15 @@
-name: Deploy to GitHub Pages
+name: Debug Build Process
 
 on:
-  # mainブランチにpushされたときに実行
   push:
     branches: [ main ]
-  
-  # GitHub UI からの手動実行を許可
   workflow_dispatch:
 
-# GitHub Pagesに必要な権限を設定
 permissions:
   contents: read
   pages: write
   id-token: write
 
-# 同時実行を制御（新しいデプロイが開始されたら古いものを停止）
 concurrency:
   group: "pages"
   cancel-in-progress: false
@@ -27,51 +22,95 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
       
-      # Node.jsのセットアップ
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: '20'
           cache: 'npm'
       
-      # 依存関係のインストール
+      # 設定ファイルの確認
+      - name: Check config files
+        run: |
+          echo "=== Listing config files ==="
+          ls -la next.config.*
+          echo "=== Contents of next.config.ts ==="
+          cat next.config.ts || echo "next.config.ts not found"
+          echo "=== Contents of next.config.js ==="
+          cat next.config.js || echo "next.config.js not found"
+          echo "=== Contents of package.json ==="
+          cat package.json
+      
+      # next.config.jsを削除（競合を避けるため）
+      - name: Remove conflicting config file
+        run: rm -f next.config.js
+      
       - name: Install dependencies
         run: npm ci
       
-      # ESLintでコード品質チェック
       - name: Run ESLint
         run: npm run lint
       
-      # TypeScript型チェック
       - name: Type check
         run: npx tsc --noEmit
       
-      # GitHub Pages設定の準備
       - name: Setup Pages
         uses: actions/configure-pages@v4
         with:
-          # Next.jsの静的エクスポート用に自動設定
           static_site_generator: next
       
-      # Next.js アプリのビルド（静的サイト生成）
-      - name: Build with Next.js
-        run: npm run build
-        
-      # 出力ディレクトリの確認（デバッグ用）
-      - name: List build output
+      # ビルド前の状態確認
+      - name: Pre-build check
         run: |
-          echo "Contents of current directory:"
+          echo "=== Directory structure before build ==="
           ls -la
-          echo "Checking for out directory:"
-          ls -la out/ || echo "out directory does not exist"
+          echo "=== Node version ==="
+          node --version
+          echo "=== NPM version ==="
+          npm --version
       
-      # ビルド成果物のアップロード
+      - name: Build with Next.js
+        run: |
+          echo "=== Starting Next.js build ==="
+          npm run build
+          echo "=== Build completed ==="
+        
+      # ビルド後の詳細確認
+      - name: Post-build analysis
+        run: |
+          echo "=== Root directory after build ==="
+          ls -la
+          echo "=== Checking for out directory ==="
+          ls -la out/ || echo "out directory does not exist"
+          echo "=== Checking .next directory ==="
+          ls -la .next/ || echo ".next directory does not exist"
+          echo "=== Looking for HTML files ==="
+          find . -name "*.html" -type f | head -20
+          echo "=== Looking for static assets ==="
+          find . -name "*.css" -o -name "*.js" -type f | grep -v node_modules | head -20
+      
+      # 適切な出力ディレクトリを決定
+      - name: Determine output directory
+        run: |
+          if [ -d "./out" ]; then
+            echo "Found ./out directory"
+            echo "OUTPUT_DIR=./out" >> $GITHUB_ENV
+            ls -la ./out/
+          elif [ -d "./.next" ] && [ -f "./.next/index.html" ]; then
+            echo "Using ./.next directory (contains HTML)"
+            echo "OUTPUT_DIR=./.next" >> $GITHUB_ENV
+            ls -la ./.next/
+          else
+            echo "No suitable output directory found"
+            echo "Available directories:"
+            find . -maxdepth 2 -type d -name "*" | grep -v node_modules | head -10
+            exit 1
+          fi
+      
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./out
+          path: ${{ env.OUTPUT_DIR }}
 
-  # デプロイジョブ
   deploy:
     environment:
       name: github-pages
