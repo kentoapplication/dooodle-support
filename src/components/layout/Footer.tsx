@@ -7,10 +7,7 @@ export function Footer() {
         <div className="grid md:grid-cols-3 gap-8">
           <div>
             <div className="flex items-center space-x-3 mb-4">
-              <div className="w-10 h-10 bg-gradient-to-r from-purple-400 to-pink-400 rounded-lg flex items-center justify-center">
-                <span className="text-white text-lg">🎨</span>
-              </div>
-              <h6 className="text-xl font-bold">dooodle</h6>
+              <h6 className="text-xl font-bold">DOOODLE</h6>
             </div>
             <p className="text-gray-400 text-sm">
               友達と絵を共有する新感覚アプリ
@@ -20,24 +17,24 @@ export function Footer() {
             <h6 className="font-semibold mb-4">リンク</h6>
             <ul className="space-y-2 text-sm">
               <li>
-                <a 
-                  href="#features" 
+                <a
+                  href="#features"
                   className="text-gray-400 hover:text-white transition-colors"
                 >
                   機能
                 </a>
               </li>
               <li>
-                <a 
-                  href="#download" 
+                <a
+                  href="#download"
                   className="text-gray-400 hover:text-white transition-colors"
                 >
                   ダウンロード
                 </a>
               </li>
               <li>
-                <a 
-                  href="#support" 
+                <a
+                  href="#support"
                   className="text-gray-400 hover:text-white transition-colors"
                 >
                   サポート
@@ -49,16 +46,16 @@ export function Footer() {
             <h6 className="font-semibold mb-4">法的情報</h6>
             <ul className="space-y-2 text-sm">
               <li>
-                <a 
-                  href="/dooodle-support/privacy" 
+                <a
+                  href="/dooodle-support/privacy"
                   className="text-gray-400 hover:text-white transition-colors"
                 >
                   プライバシーポリシー
                 </a>
               </li>
               <li>
-                <a 
-                  href="/dooodle-support/terms" 
+                <a
+                  href="/dooodle-support/terms"
                   className="text-gray-400 hover:text-white transition-colors"
                 >
                   利用規約

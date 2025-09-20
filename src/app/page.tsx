@@ -7,11 +7,11 @@ import { HowItWorksSection } from '../components/sections/HowItWorksSection';
 import { DownloadSection } from '../components/sections/DownloadSection';
 import { SupportSection } from "@/components/sections/SupportSection";
 export const metadata: Metadata = {
-  title: "dooodle - 友達と絵を共有するアプリ",
-  description: "dooodleは友達同士で落書きを描いて共有できるソーシャルアプリです。ウィジェットで友達の絵をリアルタイムに楽しめます。",
+  title: "DOOODLE - 友達と絵を共有するアプリ",
+  description: "DOOODLEは友達同士で落書きを描いて共有できるソーシャルアプリです。ウィジェットで友達の絵をリアルタイムに楽しめます。",
   keywords: "dooodle, 絵, お絵描き, SNS, ウィジェット, 友達, 共有, アプリ",
   openGraph: {
-    title: "dooodle - 友達と絵を共有するアプリ",
+    title: "DOOODLE - 友達と絵を共有するアプリ",
     description: "友達同士で落書きを描いて共有。ウィジェットで友達の絵をリアルタイムチェック！",
     type: "website",
   }
