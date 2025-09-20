@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { LegalLayout } from '../../components/layout/LegalLayout';
 
 export const metadata: Metadata = {
   title: "プライバシーポリシー - dooodle",
@@ -8,488 +9,215 @@ export const metadata: Metadata = {
 
 export default function PrivacyPage() {
   return (
-    <div className="min-h-screen bg-gray-50">
-      {/* ヘッダー */}
-      <header className="bg-white shadow-sm">
-        <div className="max-w-4xl mx-auto px-4 py-6">
-          <div className="flex items-center justify-between">
-            <div className="flex items-center space-x-3">
-              <div className="w-10 h-10 bg-gradient-to-r from-purple-400 to-pink-400 rounded-lg flex items-center justify-center">
-                <span className="text-white text-lg">🎨</span>
-              </div>
-              <h1 className="text-xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
-                dooodle
-              </h1>
-            </div>
-            <a
-              href="/dooodle-support"
-              className="text-purple-600 hover:text-purple-700 font-medium transition-colors"
-            >
-              ← ホームに戻る
-            </a>
+    <LegalLayout title="プライバシーポリシー" lastUpdated="2025年9月11日">
+      <div className="space-y-8">
+        <section>
+          <h3 className="text-xl font-semibold text-gray-900 mb-4">第1条（はじめに）</h3>
+          <div className="text-gray-700 space-y-3">
+            <p>筒井健登（以下「開発者」といいます）は、モバイルアプリケーション「dooodle」（以下「本アプリ」といいます）における個人情報およびプライバシーの保護を重要な責務と考えています。</p>
+            <p>本プライバシーポリシー（以下「本ポリシー」といいます）は、本アプリを利用するユーザー（以下「ユーザー」といいます）の個人情報等の取扱いについて定めるものです。</p>
+            <p>本ポリシーは、個人情報の保護に関する法律（個人情報保護法）、電気通信事業法、その他関連する法令およびガイドラインに基づいて策定されています。</p>
+            <p>ユーザーは、本ポリシーの内容を確認し、同意した上で本アプリをご利用ください。</p>
           </div>
-        </div>
-      </header>
+        </section>
 
-      {/* メインコンテンツ */}
-      <main className="max-w-4xl mx-auto px-4 py-8">
-        <div className="bg-white rounded-lg shadow-sm p-8">
-          <h2 className="text-3xl font-bold text-gray-900 mb-2">プライバシーポリシー</h2>
-          <p className="text-gray-600 mb-8">最終更新日：2025年9月11日</p>
-          
-          <div className="prose prose-gray max-w-none">
-            <div className="space-y-8">
-              
-              <section>
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">第1条（はじめに）</h3>
-                <div className="text-gray-700 space-y-3">
-                  <p>筒井健登（以下「開発者」といいます）は、モバイルアプリケーション「dooodle」（以下「本アプリ」といいます）における個人情報およびプライバシーの保護を重要な責務と考えています。</p>
-                  <p>本プライバシーポリシー（以下「本ポリシー」といいます）は、本アプリを利用するユーザー（以下「ユーザー」といいます）の個人情報等の取扱いについて定めるものです。</p>
-                  <p>本ポリシーは、個人情報の保護に関する法律（個人情報保護法）、電気通信事業法、その他関連する法令およびガイドラインに基づいて策定されています。</p>
-                  <p>ユーザーは、本ポリシーの内容を確認し、同意した上で本アプリをご利用ください。</p>
-                </div>
-              </section>
-
-              <section>
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">第2条（定義・用語の説明）</h3>
-                <div className="text-gray-700 space-y-3">
-                  <ul className="list-disc pl-6 space-y-2">
-                    <li><strong>個人情報:</strong> 生存する個人に関する情報であって、特定の個人を識別することができるもの</li>
-                    <li><strong>個人データ:</strong> 個人情報データベース等を構成する個人情報</li>
-                    <li><strong>保有個人データ:</strong> 開発者が開示、内容の訂正等の権限を有する個人データ</li>
-                    <li><strong>利用者情報:</strong> 個人情報に該当するか否かを問わず、ユーザーに関連する情報</li>
-                    <li><strong>デバイス情報:</strong> スマートフォン等の端末に関する情報</li>
-                  </ul>
-                </div>
-              </section>
-
-              <section>
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">第3条（個人情報取扱事業者）</h3>
-                <div className="text-gray-700">
-                  <div className="bg-gray-50 p-4 rounded-lg">
-                    <p><strong>氏名:</strong> 筒井健登</p>
-                    <p><strong>連絡先:</strong> kentoapplication@gmail.com</p>
-                  </div>
-                </div>
-              </section>
-
-              <section>
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">第4条（収集する情報）</h3>
-                <div className="text-gray-700 space-y-4">
-                  <p>開発者は、以下の情報を収集いたします：</p>
-                  
-                  <div>
-                    <h4 className="font-semibold text-gray-900 mb-2">4.1 ユーザーが提供する情報</h4>
-                    
-                    <div className="space-y-3">
-                      <div>
-                        <h5 className="font-medium text-gray-900">アカウント情報</h5>
-                        <ul className="list-disc pl-6 space-y-1 text-sm">
-                          <li>ユーザー名（表示名）</li>
-                          <li>ユーザーID（一意識別子）</li>
-                          <li>メールアドレス</li>
-                          <li>パスワード（暗号化して保存）</li>
-                        </ul>
-                      </div>
-                      
-                      <div>
-                        <h5 className="font-medium text-gray-900">コンテンツ情報</h5>
-                        <ul className="list-disc pl-6 space-y-1 text-sm">
-                          <li>ユーザーが作成した絵画・イラスト（画像データ）</li>
-                          <li>投稿に付随するメタデータ（作成日時等）</li>
-                        </ul>
-                      </div>
-                      
-                      <div>
-                        <h5 className="font-medium text-gray-900">コミュニケーション情報</h5>
-                        <ul className="list-disc pl-6 space-y-1 text-sm">
-                          <li>友達リクエストの送受信情報</li>
-                          <li>リアクション情報</li>
-                          <li>友達関係データ</li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div>
-                    <h4 className="font-semibold text-gray-900 mb-2">4.2 自動的に収集される情報</h4>
-                    
-                    <div className="space-y-3">
-                      <div>
-                        <h5 className="font-medium text-gray-900">デバイス・技術情報</h5>
-                        <ul className="list-disc pl-6 space-y-1 text-sm">
-                          <li>デバイスの種類・モデル</li>
-                          <li>オペレーティングシステムの種類・バージョン</li>
-                          <li>アプリのバージョン</li>
-                          <li>端末の一意識別子</li>
-                          <li>IPアドレス</li>
-                          <li>タイムゾーン設定</li>
-                        </ul>
-                      </div>
-                      
-                      <div>
-                        <h5 className="font-medium text-gray-900">利用状況情報</h5>
-                        <ul className="list-disc pl-6 space-y-1 text-sm">
-                          <li>アプリの起動・利用時間</li>
-                          <li>機能の利用状況・頻度</li>
-                          <li>操作ログ・クリック情報</li>
-                          <li>エラー・クラッシュ情報</li>
-                          <li>パフォーマンス関連データ</li>
-                        </ul>
-                      </div>
-                      
-                      <div>
-                        <h5 className="font-medium text-gray-900">Apple固有の情報（iOSの場合）</h5>
-                        <ul className="list-disc pl-6 space-y-1 text-sm">
-                          <li>Apple Push Notification Service（APNs）トークン</li>
-                          <li>WidgetKit関連データ</li>
-                          <li>PencilKit利用データ</li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div>
-                    <h4 className="font-semibold text-gray-900 mb-2">4.3 第三者から取得する情報</h4>
-                    <ul className="list-disc pl-6 space-y-1">
-                      <li>Firebase Analyticsからの統計情報</li>
-                      <li>Apple App Storeからの配信関連情報</li>
-                    </ul>
-                  </div>
-                </div>
-              </section>
-
-              <section>
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">第5条（個人情報の利用目的）</h3>
-                <div className="text-gray-700 space-y-4">
-                  <p>収集した個人情報は、以下の目的で利用いたします：</p>
-                  
-                  <div className="space-y-4">
-                    <div>
-                      <h4 className="font-semibold text-gray-900 mb-2">5.1 サービス提供目的</h4>
-                      <ul className="list-disc pl-6 space-y-1">
-                        <li>ユーザーアカウントの作成・管理・認証</li>
-                        <li>絵の作成・保存・表示機能の提供</li>
-                        <li>友達機能（検索・リクエスト・承認）の提供</li>
-                        <li>リアクション機能の提供</li>
-                        <li>ウィジェット機能の提供（友達の絵のランダム表示）</li>
-                        <li>プッシュ通知機能の提供</li>
-                      </ul>
-                    </div>
-
-                    <div>
-                      <h4 className="font-semibold text-gray-900 mb-2">5.2 サービス改善・運営目的</h4>
-                      <ul className="list-disc pl-6 space-y-1">
-                        <li>サービスの品質向上・機能改善</li>
-                        <li>新機能の開発・テスト</li>
-                        <li>システムの安定稼働・パフォーマンス向上</li>
-                        <li>バグ修正・エラー対応</li>
-                        <li>利用状況の統計分析（個人を特定できない形で処理）</li>
-                      </ul>
-                    </div>
-
-                    <div>
-                      <h4 className="font-semibold text-gray-900 mb-2">5.3 安全・セキュリティ目的</h4>
-                      <ul className="list-disc pl-6 space-y-1">
-                        <li>不正アクセス・不正利用の防止・検知</li>
-                        <li>アカウントのセキュリティ確保</li>
-                        <li>規約違反行為の調査・対応</li>
-                        <li>法令遵守・法的対応</li>
-                      </ul>
-                    </div>
-
-                    <div>
-                      <h4 className="font-semibold text-gray-900 mb-2">5.4 コミュニケーション目的</h4>
-                      <ul className="list-disc pl-6 space-y-1">
-                        <li>重要なお知らせ・システム通知の配信</li>
-                        <li>アップデート情報の提供</li>
-                        <li>お問い合わせへの対応</li>
-                      </ul>
-                    </div>
-
-                    <div>
-                      <h4 className="font-semibold text-gray-900 mb-2">5.5 将来実装予定機能の目的</h4>
-                      <ul className="list-disc pl-6 space-y-1">
-                        <li>広告配信サービスの提供（実装時に別途通知）</li>
-                        <li>有料機能の提供（実装時に別途通知）</li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              </section>
-
-              <section>
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">第6条（個人情報の第三者提供）</h3>
-                <div className="text-gray-700 space-y-4">
-                  <div>
-                    <h4 className="font-semibold text-gray-900 mb-2">6.1 第三者提供の原則</h4>
-                    <p>開発者は、以下の場合を除き、ユーザーの個人情報を第三者に提供いたしません：</p>
-                    <ul className="list-disc pl-6 space-y-1">
-                      <li>ユーザーの同意がある場合</li>
-                      <li>法令に基づく場合</li>
-                      <li>人の生命、身体または財産の保護のために必要がある場合</li>
-                      <li>公衆衛生の向上または児童の健全な育成の推進のために特に必要がある場合</li>
-                      <li>国の機関等への協力が必要な場合</li>
-                    </ul>
-                  </div>
-
-                  <div>
-                    <h4 className="font-semibold text-gray-900 mb-2">6.2 業務委託に伴う提供</h4>
-                    <p>開発者は、業務委託に伴い以下の委託先に個人情報を提供する場合があります：</p>
-                    
-                    <div className="space-y-3">
-                      <div className="bg-gray-50 p-4 rounded-lg">
-                        <h5 className="font-medium text-gray-900">Google LLC（Firebase サービス）</h5>
-                        <ul className="text-sm space-y-1 mt-2">
-                          <li><strong>提供目的:</strong> ユーザー認証、データベース、ストレージ、分析機能の提供</li>
-                          <li><strong>提供する情報:</strong> アカウント情報、コンテンツ情報、利用状況情報</li>
-                          <li><strong>所在地:</strong> アメリカ合衆国</li>
-                          <li><strong>保護措置:</strong> 適切なデータ処理契約（DPA）を締結</li>
-                        </ul>
-                      </div>
-
-                      <div className="bg-gray-50 p-4 rounded-lg">
-                        <h5 className="font-medium text-gray-900">Apple Inc.</h5>
-                        <ul className="text-sm space-y-1 mt-2">
-                          <li><strong>提供目的:</strong> アプリ配信、プッシュ通知、決済処理</li>
-                          <li><strong>提供する情報:</strong> デバイス情報、通知用トークン</li>
-                          <li><strong>所在地:</strong> アメリカ合衆国</li>
-                          <li><strong>保護措置:</strong> Apple Developer Agreement に基づく適切な保護措置</li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div>
-                    <h4 className="font-semibold text-gray-900 mb-2">6.3 外国にある第三者への提供</h4>
-                    <div className="bg-yellow-50 p-4 rounded-lg">
-                      <p className="font-medium text-yellow-900 mb-2">個人情報の外国への移転について：</p>
-                      <ul className="text-sm text-yellow-800 space-y-1">
-                        <li><strong>移転先国:</strong> アメリカ合衆国、その他Googleが指定する国・地域</li>
-                        <li><strong>当該国の個人情報保護制度:</strong> 米国にはCCPA、州法等の保護規制が存在</li>
-                        <li><strong>保護措置:</strong> 標準契約条項（SCC）、認証制度への参加等</li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              </section>
-
-              <section>
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">第8条（保有個人データの開示等）</h3>
-                <div className="text-gray-700 space-y-4">
-                  <div>
-                    <h4 className="font-semibold text-gray-900 mb-2">8.1 ユーザーの権利</h4>
-                    <p>保有個人データに関して、ユーザーは以下の権利を有します：</p>
-                    
-                    <div className="space-y-3">
-                      <div>
-                        <h5 className="font-medium text-gray-900">基本的権利</h5>
-                        <ul className="list-disc pl-6 space-y-1 text-sm">
-                          <li>利用目的の通知請求権: 個人情報の利用目的の通知を求める権利</li>
-                          <li>開示請求権: 保有個人データの開示を求める権利</li>
-                          <li>訂正・追加・削除請求権: 内容に誤りがある場合の訂正等を求める権利</li>
-                          <li>利用停止・消去請求権: 不適切な取扱いがあった場合の利用停止等を求める権利</li>
-                          <li>第三者提供停止請求権: 第三者提供の停止を求める権利</li>
-                        </ul>
-                      </div>
-
-                      <div>
-                        <h5 className="font-medium text-gray-900">GDPR適用時の追加権利（EU域内ユーザー）</h5>
-                        <ul className="list-disc pl-6 space-y-1 text-sm">
-                          <li>アクセス権: 個人データ処理の詳細情報へのアクセス権</li>
-                          <li>修正権: 不正確な個人データの修正を求める権利</li>
-                          <li>消去権（忘れられる権利）: 個人データの削除を求める権利</li>
-                          <li>処理制限権: 特定の条件下での処理制限を求める権利</li>
-                          <li>データポータビリティ権: 構造化された形でのデータ提供を求める権利</li>
-                          <li>異議申立権: 自動処理による決定への異議申立権</li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div>
-                    <h4 className="font-semibold text-gray-900 mb-2">8.2 権利行使の方法</h4>
-                    <div className="bg-gray-50 p-4 rounded-lg">
-                      <p className="mb-2">権利行使をご希望の場合は、以下の方法でご連絡ください：</p>
-                      <p><strong>開発者:</strong> 筒井健登</p>
-                      <p><strong>メールアドレス:</strong> kentoapplication@gmail.com</p>
-                      <p><strong>X:</strong> @lucppy777</p>
-                    </div>
-                  </div>
-
-                  <div>
-                    <h4 className="font-semibold text-gray-900 mb-2">8.3 本人確認</h4>
-                    <p>権利行使の際は、なりすまし防止のため適切な本人確認を行います。</p>
-                  </div>
-
-                  <div>
-                    <h4 className="font-semibold text-gray-900 mb-2">8.4 手数料</h4>
-                    <p>利用目的の通知および開示請求については、手数料（1件につき500円）をいただく場合があります。</p>
-                  </div>
-
-                  <div>
-                    <h4 className="font-semibold text-gray-900 mb-2">8.5 対応期間</h4>
-                    <p>原則として請求受領から30日以内（複雑な場合は最大60日）に対応いたします。</p>
-                  </div>
-                </div>
-              </section>
-
-              <section>
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">第13条（アプリの権限・機能）</h3>
-                <div className="text-gray-700 space-y-4">
-                  <div>
-                    <h4 className="font-semibold text-gray-900 mb-2">13.1 要求する権限</h4>
-                    <p>本アプリでは以下の権限を要求する場合があります：</p>
-                    
-                    <div className="space-y-3">
-                      <div>
-                        <h5 className="font-medium text-gray-900">必須権限</h5>
-                        <ul className="list-disc pl-6 space-y-1 text-sm">
-                          <li>インターネットアクセス: サービス利用のための通信</li>
-                          <li>ネットワーク状態: 接続状況の確認</li>
-                        </ul>
-                      </div>
-
-                      <div>
-                        <h5 className="font-medium text-gray-900">オプション権限</h5>
-                        <ul className="list-disc pl-6 space-y-1 text-sm">
-                          <li>通知権限: プッシュ通知の配信</li>
-                          <li>カメラ権限: 写真撮影機能使用時（将来実装予定）</li>
-                          <li>写真ライブラリ: 画像選択時（将来実装予定）</li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div>
-                    <h4 className="font-semibold text-gray-900 mb-2">13.2 権限の管理</h4>
-                    <p>ユーザーはいつでもデバイス設定から権限の変更・取り消しが可能です。</p>
-                  </div>
-
-                  <div>
-                    <h4 className="font-semibold text-gray-900 mb-2">13.3 ウィジェット機能</h4>
-                    <div className="bg-blue-50 p-4 rounded-lg">
-                      <ul className="text-sm text-blue-800 space-y-1">
-                        <li>• iOS WidgetKit を使用してホーム画面に友達の絵を表示</li>
-                        <li>• 表示される絵はランダムに選択され、定期的に更新</li>
-                        <li>• ウィジェット表示のためにアプリグループ領域にデータを一時保存</li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              </section>
-
-              <section>
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">第14条（第三者サービス・外部リンク）</h3>
-                <div className="text-gray-700 space-y-4">
-                  <div>
-                    <h4 className="font-semibold text-gray-900 mb-2">14.1 利用する第三者サービス</h4>
-                    
-                    <div className="space-y-3">
-                      <div className="bg-gray-50 p-4 rounded-lg">
-                        <h5 className="font-medium text-gray-900">Firebase（Google LLC）</h5>
-                        <ul className="text-sm space-y-1 mt-2">
-                          <li><strong>サービス内容:</strong> ユーザー認証、データベース、ストレージ、分析</li>
-                          <li><strong>プライバシーポリシー:</strong> <a href="https://firebase.google.com/support/privacy" className="text-blue-600 hover:underline" target="_blank" rel="noopener noreferrer">https://firebase.google.com/support/privacy</a></li>
-                          <li><strong>データ処理契約:</strong> Google Cloud Data Processing Addendum</li>
-                        </ul>
-                      </div>
-
-                      <div className="bg-gray-50 p-4 rounded-lg">
-                        <h5 className="font-medium text-gray-900">Apple サービス</h5>
-                        <ul className="text-sm space-y-1 mt-2">
-                          <li><strong>サービス内容:</strong> App Store、Push Notification、WidgetKit</li>
-                          <li><strong>プライバシーポリシー:</strong> <a href="https://www.apple.com/privacy/" className="text-blue-600 hover:underline" target="_blank" rel="noopener noreferrer">https://www.apple.com/privacy/</a></li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div>
-                    <h4 className="font-semibold text-gray-900 mb-2">14.2 外部リンク</h4>
-                    <p>本アプリから外部サイトへのリンクがある場合、リンク先サイトのプライバシーポリシーは開発者の管理下にありません。</p>
-                  </div>
-                </div>
-              </section>
-
-              <section>
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">第17条（お問い合わせ・苦情処理）</h3>
-                <div className="text-gray-700 space-y-4">
-                  <div>
-                    <h4 className="font-semibold text-gray-900 mb-2">17.1 連絡先</h4>
-                    <div className="bg-gray-50 p-4 rounded-lg">
-                      <p className="mb-2">本ポリシーに関するお問い合わせは以下まで：</p>
-                      <p><strong>開発者:</strong> 筒井健登</p>
-                      <p><strong>メールアドレス:</strong> kentoapplication@gmail.com</p>
-                      <p><strong>X:</strong> @lucppy777</p>
-                    </div>
-                  </div>
-
-                  <div>
-                    <h4 className="font-semibold text-gray-900 mb-2">17.2 苦情処理</h4>
-                    <div className="space-y-3">
-                      <p>個人情報の取扱いに関する苦情がある場合：</p>
-                      <ul className="list-disc pl-6 space-y-1">
-                        <li>まず開発者へ直接ご相談ください</li>
-                        <li>解決しない場合は個人情報保護委員会等の監督機関にご相談いただけます</li>
-                      </ul>
-                      
-                      <div className="bg-red-50 p-4 rounded-lg">
-                        <h6 className="font-medium text-red-900 mb-2">個人情報保護委員会:</h6>
-                        <p className="text-sm text-red-800"><strong>電話:</strong> 03-6457-9849</p>
-                        <p className="text-sm text-red-800"><strong>ウェブサイト:</strong> <a href="https://www.ppc.go.jp/" className="text-blue-600 hover:underline" target="_blank" rel="noopener noreferrer">https://www.ppc.go.jp/</a></p>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div>
-                    <h4 className="font-semibold text-gray-900 mb-2">17.3 対応期間</h4>
-                    <p>お問い合わせには原則として7営業日以内に回答いたします。</p>
-                  </div>
-                </div>
-              </section>
-
-              <section>
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">第18条（準拠法・管轄）</h3>
-                <div className="text-gray-700 space-y-3">
-                  <p>本ポリシーは日本法に準拠して解釈されます。</p>
-                  <p>本ポリシーに関する紛争については、東京地方裁判所を専属的合意管轄裁判所とします。</p>
-                </div>
-              </section>
-
-              <section>
-                <div className="bg-purple-50 p-6 rounded-lg">
-                  <h3 className="text-lg font-semibold text-purple-900 mb-4">重要な情報・リンク</h3>
-                  <div className="text-purple-800 text-sm space-y-2">
-                    <p>• <strong>Firebase プライバシーポリシー:</strong> <a href="https://firebase.google.com/support/privacy" className="text-blue-600 hover:underline" target="_blank" rel="noopener noreferrer">https://firebase.google.com/support/privacy</a></p>
-                    <p>• <strong>Apple プライバシーポリシー:</strong> <a href="https://www.apple.com/privacy/" className="text-blue-600 hover:underline" target="_blank" rel="noopener noreferrer">https://www.apple.com/privacy/</a></p>
-                    <p>• <strong>個人情報保護委員会:</strong> <a href="https://www.ppc.go.jp/" className="text-blue-600 hover:underline" target="_blank" rel="noopener noreferrer">https://www.ppc.go.jp/</a></p>
-                    <p>• <strong>制定日:</strong> 2025年9月11日</p>
-                    <p>• <strong>最終更新:</strong> 2025年9月11日</p>
-                    <p>• <strong>バージョン:</strong> 1.0</p>
-                  </div>
-                </div>
-              </section>
-
-            </div>
+        <section>
+          <h3 className="text-xl font-semibold text-gray-900 mb-4">第2条（定義・用語の説明）</h3>
+          <div className="text-gray-700 space-y-3">
+            <ul className="list-disc pl-6 space-y-2">
+              <li><strong>個人情報:</strong> 生存する個人に関する情報であって、特定の個人を識別することができるもの</li>
+              <li><strong>個人データ:</strong> 個人情報データベース等を構成する個人情報</li>
+              <li><strong>保有個人データ:</strong> 開発者が開示、訂正等の権限を有する個人データ</li>
+              <li><strong>本アプリ:</strong> dooodle（iOS向けモバイルアプリケーション）</li>
+              <li><strong>本サービス:</strong> 本アプリによって提供される一切のサービス</li>
+              <li><strong>ユーザー:</strong> 本アプリを利用する個人</li>
+              <li><strong>コンテンツ:</strong> ユーザーが本アプリ内で作成・投稿する絵画、画像、テキスト等</li>
+              <li><strong>個人情報:</strong> 個人情報保護法に定める個人情報</li>
+              <li><strong>知的財産権:</strong> 著作権、特許権、実用新案権、商標権その他の知的財産権</li>
+            </ul>
           </div>
-        </div>
-      </main>
+        </section>
 
-      {/* フッター */}
-      <footer className="bg-gray-900 text-white py-8 px-4">
-        <div className="max-w-4xl mx-auto text-center">
-          <div className="flex items-center justify-center space-x-3 mb-4">
-            <div className="w-8 h-8 bg-gradient-to-r from-purple-400 to-pink-400 rounded-lg flex items-center justify-center">
-              <span className="text-white">🎨</span>
-            </div>
-            <h6 className="text-lg font-bold">dooodle</h6>
+        <section>
+          <h3 className="text-xl font-semibold text-gray-900 mb-4">第3条（利用登録）</h3>
+          <div className="text-gray-700 space-y-3">
+            <p>本アプリの利用を希望する者は、本規約に同意した上で、開発者の定める方法によって利用登録を申請し、開発者がこれを承認することによって、利用登録が完了するものとします。</p>
+            <p>開発者は、利用登録の申請者に以下の事由があると判断した場合、利用登録の申請を承認しないことがあり、その理由を開示する義務を負わないものとします。</p>
+            <ul className="list-disc pl-6 space-y-1">
+              <li>利用登録の申請に際して虚偽の事項を届け出た場合</li>
+              <li>本規約に違反したことがある者からの申請である場合</li>
+              <li>未成年者、成年被後見人、被保佐人又は被補助人からの申請であって、法定代理人、後見人、保佐人又は補助人の同意等を得ていない場合</li>
+              <li>その他、開発者が利用登録を相当でないと判断した場合</li>
+            </ul>
           </div>
-          <p className="text-gray-400 text-sm">
-            &copy; 2025 筒井健登. All rights reserved.
-          </p>
+        </section>
+
+        <section>
+          <h3 className="text-xl font-semibold text-gray-900 mb-4">第4条（ユーザーIDおよびパスワードの管理）</h3>
+          <div className="text-gray-700 space-y-3">
+            <p>ユーザーは、自己の責任において、本アプリのユーザーIDおよびパスワード（以下「ユーザーID等」といいます）を適切に管理するものとします。</p>
+            <p>ユーザーは、いかなる場合にも、ユーザーID等を第三者に譲渡または貸与し、もしくは第三者と共用することはできません。</p>
+            <p>開発者は、ユーザーID等の組み合わせが登録情報と一致してログインされた場合には、そのユーザーIDを登録しているユーザー自身による利用とみなします。</p>
+            <p>ユーザーID等が第三者によって使用されたことによって生じた損害は、開発者に故意又は重大な過失がある場合を除き、開発者は一切の責任を負わないものとします。</p>
+          </div>
+        </section>
+
+        <section>
+          <h3 className="text-xl font-semibold text-gray-900 mb-4">第5条（利用料金および支払方法）</h3>
+          <div className="text-gray-700 space-y-3">
+            <p>本アプリの基本機能の利用は無料です。</p>
+            <p>将来的に有料機能を追加する場合は、事前にユーザーに通知し、明示的な同意を得た上で課金を行います。</p>
+            <p>有料機能の料金および支払方法については、別途定める料金表に従うものとします。</p>
+            <p>一度支払われた利用料金は、開発者に故意又は重大な過失がある場合を除き、いかなる理由があっても返金されないものとします。</p>
+          </div>
+        </section>
+
+        <section>
+          <h3 className="text-xl font-semibold text-gray-900 mb-4">第6条（禁止事項）</h3>
+          <div className="text-gray-700 space-y-3">
+            <p>ユーザーは、本アプリの利用にあたり、以下の行為をしてはなりません。</p>
+            <ul className="list-disc pl-6 space-y-1">
+              <li>法令または公序良俗に違反する行為</li>
+              <li>犯罪行為に関連する行為</li>
+              <li>本アプリのサーバーまたはネットワークの機能を破壊したり、妨害したりする行為</li>
+              <li>本アプリによって得られた情報を商業的に利用する行為</li>
+              <li>開発者のサービスの運営を妨害するおそれのある行為</li>
+              <li>他のユーザーに関する個人情報等を収集または蓄積する行為</li>
+              <li>不正アクセスをし、またはこれを試みる行為</li>
+              <li>他のユーザーに成りすます行為</li>
+              <li>開発者や他のユーザーの知的財産権を侵害する行為</li>
+              <li>過度に暴力的な表現、露骨な性的表現、人種、国籍、信条、性別、社会的身分、門地等による差別につながる表現、自殺、自傷行為、薬物乱用を誘引または助長する表現、その他反社会的な内容を含み他人に不快感を与える表現を投稿または送信する行為</li>
+              <li>営業、宣伝、広告、勧誘、その他営利を目的とする行為（開発者の認めたものを除きます。）、性行為やわいせつな行為を目的とする行為、面識のない異性との出会いや交際を目的とする行為、他のユーザーに対する嫌がらせや誹謗中傷を目的とする行為、その他本アプリが予定している利用目的と異なる目的で本サービスを利用する行為</li>
+              <li>宗教活動や政治活動</li>
+              <li>その他、開発者が不適切と判断する行為</li>
+            </ul>
+          </div>
+        </section>
+
+        <section>
+          <h3 className="text-xl font-semibold text-gray-900 mb-4">第7条（本サービスの提供の停止等）</h3>
+          <div className="text-gray-700 space-y-3">
+            <p>開発者は、以下のいずれかの事由があると判断した場合、ユーザーに事前に通知することなく本サービスの全部または一部の提供を停止または中断することができるものとします。</p>
+            <ul className="list-disc pl-6 space-y-1">
+              <li>本サービスにかかるコンピュータシステムの保守点検または更新を行う場合</li>
+              <li>地震、落雷、火災、停電または天災などの不可抗力により、本サービスの提供が困難となった場合</li>
+              <li>コンピュータまたは通信回線等が事故により停止した場合</li>
+              <li>その他、開発者が本サービスの提供が困難と判断した場合</li>
+            </ul>
+            <p>開発者は、本サービスの提供の停止または中断により、ユーザーまたは第三者が被ったいかなる不利益または損害についても、一切の責任を負わないものとします。</p>
+          </div>
+        </section>
+
+        <section>
+          <h3 className="text-xl font-semibold text-gray-900 mb-4">第8条（著作権）</h3>
+          <div className="text-gray-700 space-y-3">
+            <p>ユーザーが本アプリ内で作成・投稿したコンテンツの著作権は、当該ユーザーに帰属します。</p>
+            <p>ただし、ユーザーは、投稿したコンテンツについて、開発者に対し、無償で、本サービスの運営、改善、プロモーション等を目的として必要な範囲内で利用する権利を許諾するものとします。</p>
+            <p>本アプリ、本サービスおよび本アプリに関連する一切の情報についての著作権およびその他の知的財産権は、開発者または開発者にその利用を許諾した権利者に帰属し、ユーザーは無断で複製、譲渡、貸与、翻訳、改変、転載、公衆送信（送信可能化を含みます。）、伝送、配布、出版、営業使用等をしてはならないものとします。</p>
+          </div>
+        </section>
+
+        <section>
+          <h3 className="text-xl font-semibold text-gray-900 mb-4">第9条（利用制限および登録抹消）</h3>
+          <div className="text-gray-700 space-y-3">
+            <p>開発者は、ユーザーが以下のいずれかに該当する場合には、事前の通知なく、投稿データを削除し、ユーザーに対して本サービスの全部もしくは一部の利用を制限しまたはユーザーとしての登録を抹消することができるものとします。</p>
+            <ul className="list-disc pl-6 space-y-1">
+              <li>本規約のいずれかの条項に違反した場合</li>
+              <li>登録事項に虚偽の事実があることが判明した場合</li>
+              <li>決済手段として当該ユーザーが届け出たクレジットカードが利用停止となった場合</li>
+              <li>料金等の支払債務の不履行があった場合</li>
+              <li>開発者からの連絡に対し、一定期間返答がない場合</li>
+              <li>本サービスについて、最終の利用から一定期間利用がない場合</li>
+              <li>その他、開発者が本サービスの利用を適当でないと判断した場合</li>
+            </ul>
+            <p>前項各号のいずれかに該当した場合、ユーザーは、当然に開発者に対する一切の債務について期限の利益を失い、その時点において負担する一切の債務を直ちに一括して弁済しなければならないものとします。</p>
+            <p>開発者は、本条に基づき開発者が行った行為によりユーザーに生じた損害について、一切の責任を負いません。</p>
+          </div>
+        </section>
+
+        <section>
+          <h3 className="text-xl font-semibold text-gray-900 mb-4">第10条（退会）</h3>
+          <div className="text-gray-700 space-y-3">
+            <p>ユーザーは、開発者の定める退会手続により、本サービスから退会できるものとします。</p>
+            <p>退会後も、ユーザーが投稿したコンテンツは他のユーザーに表示される場合があります。完全な削除を希望する場合は、退会前に個別に削除する必要があります。</p>
+          </div>
+        </section>
+
+        <section>
+          <h3 className="text-xl font-semibold text-gray-900 mb-4">第11条（保証の否認および免責事項）</h3>
+          <div className="text-gray-700 space-y-3">
+            <p>開発者は、本サービスに事実上または法律上の瑕疵（安全性、信頼性、正確性、完全性、有効性、特定の目的への適合性、セキュリティなどに関する欠陥、エラーやバグ、権利侵害などを含みます。）がないことを明示的にも黙示的にも保証しておりません。</p>
+            <p>開発者は、本サービスに起因してユーザーに生じたあらゆる損害について、開発者の故意又は重過失による場合を除き、一切の責任を負いません。ただし、本サービスに関する開発者とユーザーとの間の契約（本規約を含みます。）が消費者契約法に定める消費者契約となる場合、この免責規定は適用されません。</p>
+            <p>前項ただし書に定める場合であっても、開発者は、過失（重過失を除きます。）による債務不履行または不法行為によりユーザーに生じた損害のうち特別な事情から生じた損害（開発者またはユーザーが損害発生につき予見し、または予見し得た場合を含みます。）について一切の責任を負いません。また、開発者の過失（重過失を除きます。）による債務不履行または不法行為によりユーザーに生じた損害の賠償は、ユーザーから当該損害が発生した月に受領した利用料の額を上限とします。</p>
+            <p>開発者は、本サービスに関して、ユーザーと他のユーザーまたは第三者との間において生じた取引、連絡または紛争等について一切責任を負いません。</p>
+          </div>
+        </section>
+
+        <section>
+          <h3 className="text-xl font-semibold text-gray-900 mb-4">第12条（サービス内容の変更等）</h3>
+          <div className="text-gray-700 space-y-3">
+            <p>開発者は、ユーザーへの事前の告知をもって、本サービスの内容を変更、追加または廃止することがあり、ユーザーはこれを承諾するものとします。</p>
+            <p>重要な変更については、可能な限り事前に十分な期間をもってユーザーに通知します。</p>
+          </div>
+        </section>
+
+        <section>
+          <h3 className="text-xl font-semibold text-gray-900 mb-4">第13条（利用規約の変更）</h3>
+          <div className="text-gray-700 space-y-3">
+            <p>開発者は以下の場合には、ユーザーの個別の同意を要することなく、本規約を変更することができるものとします。</p>
+            <ul className="list-disc pl-6 space-y-1">
+              <li>本規約の変更がユーザーの一般の利益に適合するとき。</li>
+              <li>本規約の変更が本サービス利用契約の目的に反せず、かつ、変更の必要性、変更後の内容の相当性その他の変更に係る事情に照らして合理的なものであるとき。</li>
+            </ul>
+            <p>開発者はユーザーに対し、前項による本規約の変更にあたり、事前に、本規約を変更する旨および変更後の本規約の内容並びにその効力発生時期を通知します。</p>
+            <p>変更後の利用規約は、アプリ内での通知または当サイトでの告知により効力を生じるものとします。</p>
+          </div>
+        </section>
+
+        <section>
+          <h3 className="text-xl font-semibold text-gray-900 mb-4">第14条（個人情報の取扱い）</h3>
+          <div className="text-gray-700 space-y-3">
+            <p>開発者は、本サービスの利用によって取得する個人情報については、開発者「プライバシーポリシー」に従い適切に取り扱うものとします。</p>
+            <p>プライバシーポリシーの詳細については、別途定める「プライバシーポリシー」をご確認ください。</p>
+          </div>
+        </section>
+
+        <section>
+          <h3 className="text-xl font-semibold text-gray-900 mb-4">第15条（通知または連絡）</h3>
+          <div className="text-gray-700 space-y-3">
+            <p>ユーザーと開発者との間の通知または連絡は、開発者の定める方法によって行うものとします。</p>
+            <p>開発者は、ユーザーから、開発者が別途定める方式に従った変更届け出がない限り、現在登録されている連絡先が有効なものとみなして当該連絡先へ通知または連絡を行い、これらは、発信時にユーザーへ到達したものとみなします。</p>
+          </div>
+        </section>
+
+        <section>
+          <h3 className="text-xl font-semibold text-gray-900 mb-4">第16条（権利義務の譲渡の禁止）</h3>
+          <div className="text-gray-700 space-y-3">
+            <p>ユーザーは、開発者の書面による事前の承諾なく、利用契約上の地位または本規約に基づく権利もしくは義務を第三者に譲渡し、または担保に供することはできません。</p>
+          </div>
+        </section>
+
+        <section>
+          <h3 className="text-xl font-semibold text-gray-900 mb-4">第17条（適用法・管轄裁判所）</h3>
+          <div className="text-gray-700 space-y-3">
+            <p>本規約の解釈にあたっては、日本法を適用するものとします。</p>
+            <p>本サービスに関して紛争が生じた場合には、開発者の所在地を管轄する裁判所を専属的合意管轄とします。</p>
+          </div>
+        </section>
+
+        <section>
+          <h3 className="text-xl font-semibold text-gray-900 mb-4">第18条（分離可能性）</h3>
+          <div className="text-gray-700 space-y-3">
+            <p>本規約のいずれかの条項またはその一部が無効または執行不能と判断された場合であっても、そのことは他の規定の有効性に影響を与えないものとします。</p>
+          </div>
+        </section>
+
+        <div className="mt-12 pt-8 border-t border-gray-200 text-sm text-gray-600">
+          <p><strong>制定日:</strong> 2025年9月11日</p>
+          <p><strong>最終更新:</strong> 2025年9月11日</p>
+          <p><strong>バージョン:</strong> 1.0</p>
         </div>
-      </footer>
-    </div>
+      </div>
+    </LegalLayout>
   );
 }
