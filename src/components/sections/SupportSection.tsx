@@ -50,7 +50,7 @@ export function SupportSection() {
               ご不明な点やご要望がございましたら、下記フォームからお気軽にお問い合わせください。
             </p>
             <a
-              href="https://forms.gle/YOUR_GOOGLE_FORM_ID"
+              href="https://forms.gle/9uvw6wjUHberEJ6fA"
               className="inline-block bg-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-purple-700 transition-colors"
               target="_blank"
               rel="noopener noreferrer"
