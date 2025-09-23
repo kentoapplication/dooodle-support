@@ -26,7 +26,7 @@ const nextConfig: NextConfig = {
   async headers() {
     return [
       {
-        source: '/dooodle-support/.well-known/apple-app-site-association',
+        source: '/dooodle-support/.well-known/apple-app-site-association.json',
         headers: [
           {
             key: 'Content-Type',
