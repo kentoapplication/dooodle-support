@@ -13,16 +13,20 @@ const nextConfig: NextConfig = {
   async rewrites() {
     return [
       {
-        source: '/.well-known/apple-app-site-association',
-        destination: '/.well-known/apple-app-site-association.json',
+        "source": "!.well-known/**",
+        "destination": "index.html"
       },
+      {
+        "source": ".well-known/apple-app-site-association",
+        "destination": ".well-known/apple-app-site-association.json"
+      }
     ]
   },
 
   async headers() {
     return [
       {
-        source: '/dooodle-support/.well-known/apple-app-site-association.json',
+        source: '/dooodle-support/.well-known/apple-app-site-association',
         headers: [
           {
             key: 'Content-Type',
