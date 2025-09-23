@@ -1,0 +1,14 @@
+include:
+  - .well-known
+
+# GitHub Pages設定
+plugins:
+  - jekyll-optional-front-matter
+
+# MIME typeの設定
+defaults:
+  - scope:
+      path: ".well-known/apple-app-site-association"
+    values:
+      layout: null
+      sitemap: false

@@ -1,0 +1,19 @@
+{
+  "applinks": {
+    "apps": [],
+    "details": [
+      {
+        "appIDs": ["R2ZQ9WXCW7.kenma.dooodle"],
+        "paths": ["/dooodle-support/invite/*", "/dooodle-support/invite"],
+        "components": [
+          {
+            "/": "/dooodle-support/invite/*",
+            "?": {
+              "id": "*"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}
