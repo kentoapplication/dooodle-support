@@ -47,7 +47,7 @@ export function HowItWorksSection() {
               <Box p={8} textAlign="center">
                 <Circle
                   size="16"
-                  bgGradient="linear(to-r, purple.400, pink.400)"
+                  bgColor={"red.300"}
                   color="white"
                   fontSize="2xl"
                   fontWeight="bold"

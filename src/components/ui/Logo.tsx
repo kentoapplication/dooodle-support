@@ -1,4 +1,4 @@
-import { Flex, Heading } from '@chakra-ui/react';
+import { Flex, Heading, Link } from '@chakra-ui/react';
 
 export function Logo({ size = 'md' }: { size?: 'sm' | 'md' | 'lg' }) {
   const textSizes = {
@@ -10,7 +10,9 @@ export function Logo({ size = 'md' }: { size?: 'sm' | 'md' | 'lg' }) {
   return (
     <Flex align="center" gap={3}>
       <Heading as="h1" size={textSizes[size]} fontWeight="bold">
-        DOOODLE
+        <Link href='/' textDecoration={"none"}>
+          DOOODLE
+        </Link>
       </Heading>
     </Flex>
   );
