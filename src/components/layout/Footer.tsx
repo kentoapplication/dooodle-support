@@ -47,7 +47,7 @@ export function Footer() {
             <ul className="space-y-2 text-sm">
               <li>
                 <a
-                  href="/dooodle-support/privacy"
+                  href="/privacy"
                   className="text-gray-400 hover:text-white transition-colors"
                 >
                   プライバシーポリシー
@@ -55,7 +55,7 @@ export function Footer() {
               </li>
               <li>
                 <a
-                  href="/dooodle-support/terms"
+                  href="/terms"
                   className="text-gray-400 hover:text-white transition-colors"
                 >
                   利用規約

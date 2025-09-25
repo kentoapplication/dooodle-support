@@ -11,7 +11,7 @@ export function LegalHeader({ title }: LegalHeaderProps) {
         <div className="flex items-center justify-between">
           <Logo />
           <a
-            href="/dooodle-support"
+            href="/"
             className="text-purple-600 hover:text-purple-700 font-medium transition-colors"
           >
             ← ホームに戻る
