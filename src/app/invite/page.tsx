@@ -9,22 +9,22 @@ import {
   Grid,
   Flex,
   Circle,
-  Link
+  Link,
+  Image
 } from '@chakra-ui/react';
 import { Footer } from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
 
 export const metadata: Metadata = {
-  title: "dooodleに招待されました！ - dooodle",
-  description: "友達があなたをdooodleに招待しています。App Storeからダウンロードして一緒に絵を描きましょう！",
+  title: "DOOODLEに招待されました！ - DOOODLE",
+  description: "友達があなたをDOOODLEに招待しています。App Storeからダウンロードして一緒に絵を描きましょう！",
   robots: "index, follow",
-  // Smart App Banner（iOSで自動的にアプリインストールバナーを表示）
   other: {
-    "apple-itunes-app": "app-id=6745752847", // 実際のApp Store IDに置き換え
+    "apple-itunes-app": "app-id=6745752847",
   },
   openGraph: {
-    title: "dooodleに招待されました！🎨",
-    description: "友達があなたをdooodleに招待しています。App Storeからダウンロードして一緒に絵を描きましょう！",
+    title: "DOOODLEに招待されました！🎨",
+    description: "友達があなたをDOOODLEに招待しています。App Storeからダウンロードして一緒に絵を描きましょう！",
     type: "website",
     locale: "ja_JP",
   },
@@ -40,21 +40,23 @@ export default function InvitePage() {
           {/* 招待メッセージ */}
           <VStack gap={8} mb={8}>
             <Box textAlign="center">
-              <Circle
-                size="20"
-                bgGradient="linear(to-r, purple.400, pink.400)"
-                color="white"
-                fontSize="4xl"
+              <Image
+                src="/icon.png"
+                alt="dooodle アイコン"
+                width="20"
+                height="20"
+                borderRadius="2xl"
+                boxShadow="2xl"
                 mb={4}
                 mx="auto"
-              >
-                🎉
-              </Circle>
+                objectFit="cover"
+                bg="white"
+              />
               <Heading as="h2" fontSize="3xl" fontWeight="bold" color="gray.900" mb={4}>
-                dooodleに招待されました！
+                DOOODLEに招待されました！
               </Heading>
               <Text fontSize="xl" color="gray.600" mb={6}>
-                友達があなたをdooodleに招待しています
+                友達があなたをDOOODLEに招待しています
               </Text>
             </Box>
 
@@ -62,10 +64,10 @@ export default function InvitePage() {
             <VStack align="stretch" gap={8} width="full">
               <Box as="section">
                 <Heading as="h3" fontSize="xl" fontWeight="semibold" color="gray.900" mb={4}>
-                  ✨ dooodleとは？
+                  ✨ DOOODLEとは？
                 </Heading>
                 <VStack align="stretch" gap={3} color="gray.700">
-                  <Text>dooodleは友達同士で絵を描いて共有できる新感覚のソーシャルアプリです。</Text>
+                  <Text>DOOODLEは友達同士で絵を描いて共有できる新感覚のソーシャルアプリです。</Text>
                   <Text>Apple PencilやiPhoneの指で自由に絵を描き、友達と楽しく共有できます。</Text>
                 </VStack>
               </Box>
