@@ -13,7 +13,7 @@ export function Logo({ size = 'md' }: { size?: 'sm' | 'md' | 'lg' }) {
 
   return (
     <div className="flex items-center space-x-3">
-      <h1 className={`${textSizeClasses[size]} font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent`}>
+      <h1 className={`${textSizeClasses[size]} font-bold `}>
         DOOODLE
       </h1>
     </div>
