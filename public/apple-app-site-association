@@ -5,10 +5,7 @@
       {
         "appIDs": ["R2ZQ9WXCW7.kenma.dooodle"],
         "paths": [
-          "/share/*",
-          "/invite/*",
-          "/user/*",
-          "/drawing/*"
+          "/invite/*"
         ]
       }
     ]
