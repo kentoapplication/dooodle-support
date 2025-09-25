@@ -17,7 +17,7 @@ export function DownloadSection() {
             今すぐダウンロード
           </Heading>
           <Text fontSize="xl" color="gray.600" mb={8}>
-            iOS 15.0以降のiPhoneでご利用いただけます
+            iOS 18.2以降のiPhoneでご利用いただけます
           </Text>
           <Button
             href="https://apps.apple.com/app/dooodle"

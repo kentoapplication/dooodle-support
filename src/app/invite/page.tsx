@@ -141,7 +141,7 @@ export default function InvitePage() {
                 </Heading>
                 <Box textAlign="center">
                   <Text color="gray.600" mb={6}>
-                    iOS 15.0以降のiPhoneでご利用いただけます
+                    iOS 18.2以降のiPhoneでご利用いただけます
                   </Text>
                   <Link
                     href="https://apps.apple.com/app/dooodle/idYOUR_APP_ID"
