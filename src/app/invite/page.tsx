@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import {
-  ChakraProvider,
   Box,
   Container,
   Heading,

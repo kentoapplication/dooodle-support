@@ -1,11 +1,7 @@
 import { Box, Container, Flex, Link } from '@chakra-ui/react';
 import { Logo } from '../ui/Logo';
 
-interface LegalHeaderProps {
-  title: string;
-}
-
-export function LegalHeader({ title }: LegalHeaderProps) {
+export function LegalHeader() {
   return (
     <Box as="header" bg="white" boxShadow="sm">
       <Container maxW="4xl" py={6}>

@@ -10,7 +10,7 @@ interface LegalLayoutProps {
 export function LegalLayout({ title, lastUpdated, children }: LegalLayoutProps) {
   return (
     <Box minH="100vh" bg="gray.50">
-      <LegalHeader title={title} />
+      <LegalHeader />
       <Container as="main" maxW="4xl" py={8}>
         <Box bg="white" borderRadius="lg" boxShadow="sm" p={8}>
           <VStack align="stretch" gap={8}>

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { ChakraProvider, Box, Heading, Text, VStack, List, ListItem } from '@chakra-ui/react';
+import { Box, Heading, Text, VStack, List, ListItem } from '@chakra-ui/react';
 import { LegalLayout } from '../../components/layout/LegalLayout';
 
 export const metadata: Metadata = {

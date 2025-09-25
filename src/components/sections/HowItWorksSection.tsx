@@ -4,7 +4,6 @@ import {
   Grid,
   Heading,
   Text,
-  Flex,
   Circle
 } from '@chakra-ui/react';
 import { Card } from '../ui/Card';
