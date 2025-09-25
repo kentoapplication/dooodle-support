@@ -1,3 +1,12 @@
+import {
+  Box,
+  Container,
+  Grid,
+  Heading,
+  Text,
+  Flex,
+  Circle
+} from '@chakra-ui/react';
 import { Card } from '../ui/Card';
 import { Section } from '../ui/Section';
 
@@ -22,26 +31,49 @@ export function HowItWorksSection() {
 
   return (
     <Section background="gray">
-      <div className="max-w-6xl mx-auto">
-        <h3 className="text-3xl font-bold text-center mb-12 text-gray-900">
+      <Container maxW="6xl">
+        <Heading
+          as="h3"
+          fontSize="3xl"
+          fontWeight="bold"
+          textAlign="center"
+          mb={12}
+          color="gray.900"
+        >
           使い方
-        </h3>
-        <div className="grid md:grid-cols-3 gap-8">
+        </Heading>
+        <Grid templateColumns={{ base: '1fr', md: 'repeat(3, 1fr)' }} gap={8}>
           {steps.map((step, index) => (
-            <Card key={index} className="p-8 text-center">
-              <div className="w-16 h-16 bg-gradient-to-r from-purple-400 to-pink-400 rounded-full flex items-center justify-center text-white text-2xl font-bold mb-6 mx-auto">
-                {step.number}
-              </div>
-              <h4 className="text-xl font-semibold mb-3 text-gray-900">
-                {step.title}
-              </h4>
-              <p className="text-gray-600">
-                {step.description}
-              </p>
+            <Card key={index}>
+              <Box p={8} textAlign="center">
+                <Circle
+                  size="16"
+                  bgGradient="linear(to-r, purple.400, pink.400)"
+                  color="white"
+                  fontSize="2xl"
+                  fontWeight="bold"
+                  mb={6}
+                  mx="auto"
+                >
+                  {step.number}
+                </Circle>
+                <Heading
+                  as="h4"
+                  fontSize="xl"
+                  fontWeight="semibold"
+                  mb={3}
+                  color="gray.900"
+                >
+                  {step.title}
+                </Heading>
+                <Text color="gray.600">
+                  {step.description}
+                </Text>
+              </Box>
             </Card>
           ))}
-        </div>
-      </div>
+        </Grid>
+      </Container>
     </Section>
   );
 }

@@ -1,28 +1,31 @@
+import { Box } from '@chakra-ui/react';
+
 interface SectionProps {
   children: React.ReactNode;
   id?: string;
   background?: 'default' | 'gray' | 'white';
-  className?: string;
 }
 
-export function Section({ 
-  children, 
-  id, 
-  background = 'default',
-  className = '' 
+export function Section({
+  children,
+  id,
+  background = 'default'
 }: SectionProps) {
-  const backgroundClasses = {
-    default: '',
-    gray: 'bg-gray-50',
-    white: 'bg-white'
+  const backgroundColors = {
+    default: 'transparent',
+    gray: 'gray.50',
+    white: 'white'
   };
 
   return (
-    <section 
-      id={id} 
-      className={`py-20 px-4 ${backgroundClasses[background]} ${className}`}
+    <Box
+      as="section"
+      id={id}
+      py={20}
+      px={4}
+      bg={backgroundColors[background]}
     >
       {children}
-    </section>
+    </Box>
   );
 }

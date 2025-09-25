@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { ChakraProvider, Box, Heading, Text, VStack, List, ListItem } from '@chakra-ui/react';
 import { LegalLayout } from '../../components/layout/LegalLayout';
 
 export const metadata: Metadata = {
@@ -10,214 +11,124 @@ export const metadata: Metadata = {
 export default function PrivacyPage() {
   return (
     <LegalLayout title="プライバシーポリシー" lastUpdated="2025年9月11日">
-      <div className="space-y-8">
-        <section>
-          <h3 className="text-xl font-semibold text-gray-900 mb-4">第1条（はじめに）</h3>
-          <div className="text-gray-700 space-y-3">
-            <p>筒井健登（以下「開発者」といいます）は、モバイルアプリケーション「dooodle」（以下「本アプリ」といいます）における個人情報およびプライバシーの保護を重要な責務と考えています。</p>
-            <p>本プライバシーポリシー（以下「本ポリシー」といいます）は、本アプリを利用するユーザー（以下「ユーザー」といいます）の個人情報等の取扱いについて定めるものです。</p>
-            <p>本ポリシーは、個人情報の保護に関する法律（個人情報保護法）、電気通信事業法、その他関連する法令およびガイドラインに基づいて策定されています。</p>
-            <p>ユーザーは、本ポリシーの内容を確認し、同意した上で本アプリをご利用ください。</p>
-          </div>
-        </section>
+      <VStack align="stretch" gap={8}>
+        <Box as="section">
+          <Heading as="h3" fontSize="xl" fontWeight="semibold" color="gray.900" mb={4}>
+            第1条（はじめに）
+          </Heading>
+          <VStack align="stretch" gap={3} color="gray.700">
+            <Text>筒井健登（以下「開発者」といいます）は、モバイルアプリケーション「dooodle」（以下「本アプリ」といいます）における個人情報およびプライバシーの保護を重要な責務と考えています。</Text>
+            <Text>本プライバシーポリシー（以下「本ポリシー」といいます）は、本アプリを利用するユーザー（以下「ユーザー」といいます）の個人情報等の取扱いについて定めるものです。</Text>
+            <Text>本ポリシーは、個人情報の保護に関する法律（個人情報保護法）、電気通信事業法、その他関連する法令およびガイドラインに基づいて策定されています。</Text>
+            <Text>ユーザーは、本ポリシーの内容を確認し、同意した上で本アプリをご利用ください。</Text>
+          </VStack>
+        </Box>
 
-        <section>
-          <h3 className="text-xl font-semibold text-gray-900 mb-4">第2条（定義・用語の説明）</h3>
-          <div className="text-gray-700 space-y-3">
-            <ul className="list-disc pl-6 space-y-2">
-              <li><strong>個人情報:</strong> 生存する個人に関する情報であって、特定の個人を識別することができるもの</li>
-              <li><strong>個人データ:</strong> 個人情報データベース等を構成する個人情報</li>
-              <li><strong>保有個人データ:</strong> 開発者が開示、訂正等の権限を有する個人データ</li>
-              <li><strong>本アプリ:</strong> dooodle（iOS向けモバイルアプリケーション）</li>
-              <li><strong>本サービス:</strong> 本アプリによって提供される一切のサービス</li>
-              <li><strong>ユーザー:</strong> 本アプリを利用する個人</li>
-              <li><strong>コンテンツ:</strong> ユーザーが本アプリ内で作成・投稿する絵画、画像、テキスト等</li>
-              <li><strong>個人情報:</strong> 個人情報保護法に定める個人情報</li>
-              <li><strong>知的財産権:</strong> 著作権、特許権、実用新案権、商標権その他の知的財産権</li>
-            </ul>
-          </div>
-        </section>
+        <Box as="section">
+          <Heading as="h3" fontSize="xl" fontWeight="semibold" color="gray.900" mb={4}>
+            第2条（定義・用語の説明）
+          </Heading>
+          <VStack align="stretch" gap={3} color="gray.700">
+            <List.Root pl={6} gap={2}>
+              <ListItem><Text as="strong">個人情報:</Text> 生存する個人に関する情報であって、特定の個人を識別することができるもの</ListItem>
+              <ListItem><Text as="strong">個人データ:</Text> 個人情報データベース等を構成する個人情報</ListItem>
+              <ListItem><Text as="strong">保有個人データ:</Text> 開発者が開示、訂正等の権限を有する個人データ</ListItem>
+              <ListItem><Text as="strong">本アプリ:</Text> dooodle（iOS向けモバイルアプリケーション）</ListItem>
+              <ListItem><Text as="strong">本サービス:</Text> 本アプリによって提供される一切のサービス</ListItem>
+              <ListItem><Text as="strong">ユーザー:</Text> 本アプリを利用する個人</ListItem>
+              <ListItem><Text as="strong">コンテンツ:</Text> ユーザーが本アプリ内で作成・投稿する絵画、画像、テキスト等</ListItem>
+              <ListItem><Text as="strong">個人情報:</Text> 個人情報保護法に定める個人情報</ListItem>
+              <ListItem><Text as="strong">知的財産権:</Text> 著作権、特許権、実用新案権、商標権その他の知的財産権</ListItem>
+            </List.Root>
+          </VStack>
+        </Box>
 
-        <section>
-          <h3 className="text-xl font-semibold text-gray-900 mb-4">第3条（利用登録）</h3>
-          <div className="text-gray-700 space-y-3">
-            <p>本アプリの利用を希望する者は、本規約に同意した上で、開発者の定める方法によって利用登録を申請し、開発者がこれを承認することによって、利用登録が完了するものとします。</p>
-            <p>開発者は、利用登録の申請者に以下の事由があると判断した場合、利用登録の申請を承認しないことがあり、その理由を開示する義務を負わないものとします。</p>
-            <ul className="list-disc pl-6 space-y-1">
-              <li>利用登録の申請に際して虚偽の事項を届け出た場合</li>
-              <li>本規約に違反したことがある者からの申請である場合</li>
-              <li>未成年者、成年被後見人、被保佐人又は被補助人からの申請であって、法定代理人、後見人、保佐人又は補助人の同意等を得ていない場合</li>
-              <li>その他、開発者が利用登録を相当でないと判断した場合</li>
-            </ul>
-          </div>
-        </section>
+        <Box as="section">
+          <Heading as="h3" fontSize="xl" fontWeight="semibold" color="gray.900" mb={4}>
+            第3条（収集する情報）
+          </Heading>
+          <VStack align="stretch" gap={3} color="gray.700">
+            <Text>開発者は、以下の情報を収集する場合があります：</Text>
+            <List.Root pl={6} gap={1}>
+              <ListItem>アカウント情報（ユーザーID、アイコン等）</ListItem>
+              <ListItem>作成した絵画データ</ListItem>
+              <ListItem>アプリの利用状況（Firebase Analytics）</ListItem>
+              <ListItem>デバイス情報（OS、機種等の技術情報）</ListItem>
+              <ListItem>クラッシュレポート（アプリの安定性向上のため）</ListItem>
+            </List.Root>
+          </VStack>
+        </Box>
 
-        <section>
-          <h3 className="text-xl font-semibold text-gray-900 mb-4">第4条（ユーザーIDおよびパスワードの管理）</h3>
-          <div className="text-gray-700 space-y-3">
-            <p>ユーザーは、自己の責任において、本アプリのユーザーIDおよびパスワード（以下「ユーザーID等」といいます）を適切に管理するものとします。</p>
-            <p>ユーザーは、いかなる場合にも、ユーザーID等を第三者に譲渡または貸与し、もしくは第三者と共用することはできません。</p>
-            <p>開発者は、ユーザーID等の組み合わせが登録情報と一致してログインされた場合には、そのユーザーIDを登録しているユーザー自身による利用とみなします。</p>
-            <p>ユーザーID等が第三者によって使用されたことによって生じた損害は、開発者に故意又は重大な過失がある場合を除き、開発者は一切の責任を負わないものとします。</p>
-          </div>
-        </section>
+        <Box as="section">
+          <Heading as="h3" fontSize="xl" fontWeight="semibold" color="gray.900" mb={4}>
+            第4条（情報の利用目的）
+          </Heading>
+          <VStack align="stretch" gap={3} color="gray.700">
+            <Text>収集した情報は以下の目的で利用します：</Text>
+            <List.Root pl={6} gap={1}>
+              <ListItem>アプリの提供・運営</ListItem>
+              <ListItem>ユーザーサポートの提供</ListItem>
+              <ListItem>アプリの改善・新機能開発</ListItem>
+              <ListItem>技術的問題の解決</ListItem>
+              <ListItem>利用規約違反の調査</ListItem>
+            </List.Root>
+          </VStack>
+        </Box>
 
-        <section>
-          <h3 className="text-xl font-semibold text-gray-900 mb-4">第5条（利用料金および支払方法）</h3>
-          <div className="text-gray-700 space-y-3">
-            <p>本アプリの基本機能の利用は無料です。</p>
-            <p>将来的に有料機能を追加する場合は、事前にユーザーに通知し、明示的な同意を得た上で課金を行います。</p>
-            <p>有料機能の料金および支払方法については、別途定める料金表に従うものとします。</p>
-            <p>一度支払われた利用料金は、開発者に故意又は重大な過失がある場合を除き、いかなる理由があっても返金されないものとします。</p>
-          </div>
-        </section>
+        <Box as="section">
+          <Heading as="h3" fontSize="xl" fontWeight="semibold" color="gray.900" mb={4}>
+            第5条（第三者提供）
+          </Heading>
+          <VStack align="stretch" gap={3} color="gray.700">
+            <Text>開発者は、法令に基づく場合を除き、ユーザーの同意なく個人情報を第三者に提供することはありません。</Text>
+            <Text>ただし、以下の第三者サービスを利用しており、これらのサービスに情報が送信される場合があります：</Text>
+            <List.Root pl={6} gap={1}>
+              <ListItem>Firebase（Google LLC）- 認証、データベース、分析</ListItem>
+              <ListItem>Apple サービス - プッシュ通知、アプリ配信</ListItem>
+            </List.Root>
+          </VStack>
+        </Box>
 
-        <section>
-          <h3 className="text-xl font-semibold text-gray-900 mb-4">第6条（禁止事項）</h3>
-          <div className="text-gray-700 space-y-3">
-            <p>ユーザーは、本アプリの利用にあたり、以下の行為をしてはなりません。</p>
-            <ul className="list-disc pl-6 space-y-1">
-              <li>法令または公序良俗に違反する行為</li>
-              <li>犯罪行為に関連する行為</li>
-              <li>本アプリのサーバーまたはネットワークの機能を破壊したり、妨害したりする行為</li>
-              <li>本アプリによって得られた情報を商業的に利用する行為</li>
-              <li>開発者のサービスの運営を妨害するおそれのある行為</li>
-              <li>他のユーザーに関する個人情報等を収集または蓄積する行為</li>
-              <li>不正アクセスをし、またはこれを試みる行為</li>
-              <li>他のユーザーに成りすます行為</li>
-              <li>開発者や他のユーザーの知的財産権を侵害する行為</li>
-              <li>過度に暴力的な表現、露骨な性的表現、人種、国籍、信条、性別、社会的身分、門地等による差別につながる表現、自殺、自傷行為、薬物乱用を誘引または助長する表現、その他反社会的な内容を含み他人に不快感を与える表現を投稿または送信する行為</li>
-              <li>営業、宣伝、広告、勧誘、その他営利を目的とする行為（開発者の認めたものを除きます。）、性行為やわいせつな行為を目的とする行為、面識のない異性との出会いや交際を目的とする行為、他のユーザーに対する嫌がらせや誹謗中傷を目的とする行為、その他本アプリが予定している利用目的と異なる目的で本サービスを利用する行為</li>
-              <li>宗教活動や政治活動</li>
-              <li>その他、開発者が不適切と判断する行為</li>
-            </ul>
-          </div>
-        </section>
+        <Box as="section">
+          <Heading as="h3" fontSize="xl" fontWeight="semibold" color="gray.900" mb={4}>
+            第6条（ユーザーの権利）
+          </Heading>
+          <VStack align="stretch" gap={3} color="gray.700">
+            <Text>ユーザーは以下の権利を有します：</Text>
+            <List.Root pl={6} gap={1}>
+              <ListItem>個人情報の開示請求</ListItem>
+              <ListItem>個人情報の訂正・削除請求</ListItem>
+              <ListItem>個人情報の利用停止請求</ListItem>
+              <ListItem>アカウントの削除</ListItem>
+            </List.Root>
+            <Text>これらの権利を行使したい場合は、後述のお問い合わせ先までご連絡ください。</Text>
+          </VStack>
+        </Box>
 
-        <section>
-          <h3 className="text-xl font-semibold text-gray-900 mb-4">第7条（本サービスの提供の停止等）</h3>
-          <div className="text-gray-700 space-y-3">
-            <p>開発者は、以下のいずれかの事由があると判断した場合、ユーザーに事前に通知することなく本サービスの全部または一部の提供を停止または中断することができるものとします。</p>
-            <ul className="list-disc pl-6 space-y-1">
-              <li>本サービスにかかるコンピュータシステムの保守点検または更新を行う場合</li>
-              <li>地震、落雷、火災、停電または天災などの不可抗力により、本サービスの提供が困難となった場合</li>
-              <li>コンピュータまたは通信回線等が事故により停止した場合</li>
-              <li>その他、開発者が本サービスの提供が困難と判断した場合</li>
-            </ul>
-            <p>開発者は、本サービスの提供の停止または中断により、ユーザーまたは第三者が被ったいかなる不利益または損害についても、一切の責任を負わないものとします。</p>
-          </div>
-        </section>
+        <Box as="section">
+          <Heading as="h3" fontSize="xl" fontWeight="semibold" color="gray.900" mb={4}>
+            第7条（お問い合わせ）
+          </Heading>
+          <VStack align="stretch" gap={3} color="gray.700">
+            <Text>本ポリシーに関するお問い合わせは以下までお願いします：</Text>
+            <Box bg="gray.50" p={4} borderRadius="lg">
+              <Text><Text as="strong">開発者:</Text> 筒井健登</Text>
+              <Text><Text as="strong">メールアドレス:</Text> kentoapplication@gmail.com</Text>
+              <Text><Text as="strong">X:</Text> @lucppy777</Text>
+            </Box>
+          </VStack>
+        </Box>
 
-        <section>
-          <h3 className="text-xl font-semibold text-gray-900 mb-4">第8条（著作権）</h3>
-          <div className="text-gray-700 space-y-3">
-            <p>ユーザーが本アプリ内で作成・投稿したコンテンツの著作権は、当該ユーザーに帰属します。</p>
-            <p>ただし、ユーザーは、投稿したコンテンツについて、開発者に対し、無償で、本サービスの運営、改善、プロモーション等を目的として必要な範囲内で利用する権利を許諾するものとします。</p>
-            <p>本アプリ、本サービスおよび本アプリに関連する一切の情報についての著作権およびその他の知的財産権は、開発者または開発者にその利用を許諾した権利者に帰属し、ユーザーは無断で複製、譲渡、貸与、翻訳、改変、転載、公衆送信（送信可能化を含みます。）、伝送、配布、出版、営業使用等をしてはならないものとします。</p>
-          </div>
-        </section>
-
-        <section>
-          <h3 className="text-xl font-semibold text-gray-900 mb-4">第9条（利用制限および登録抹消）</h3>
-          <div className="text-gray-700 space-y-3">
-            <p>開発者は、ユーザーが以下のいずれかに該当する場合には、事前の通知なく、投稿データを削除し、ユーザーに対して本サービスの全部もしくは一部の利用を制限しまたはユーザーとしての登録を抹消することができるものとします。</p>
-            <ul className="list-disc pl-6 space-y-1">
-              <li>本規約のいずれかの条項に違反した場合</li>
-              <li>登録事項に虚偽の事実があることが判明した場合</li>
-              <li>決済手段として当該ユーザーが届け出たクレジットカードが利用停止となった場合</li>
-              <li>料金等の支払債務の不履行があった場合</li>
-              <li>開発者からの連絡に対し、一定期間返答がない場合</li>
-              <li>本サービスについて、最終の利用から一定期間利用がない場合</li>
-              <li>その他、開発者が本サービスの利用を適当でないと判断した場合</li>
-            </ul>
-            <p>前項各号のいずれかに該当した場合、ユーザーは、当然に開発者に対する一切の債務について期限の利益を失い、その時点において負担する一切の債務を直ちに一括して弁済しなければならないものとします。</p>
-            <p>開発者は、本条に基づき開発者が行った行為によりユーザーに生じた損害について、一切の責任を負いません。</p>
-          </div>
-        </section>
-
-        <section>
-          <h3 className="text-xl font-semibold text-gray-900 mb-4">第10条（退会）</h3>
-          <div className="text-gray-700 space-y-3">
-            <p>ユーザーは、開発者の定める退会手続により、本サービスから退会できるものとします。</p>
-            <p>退会後も、ユーザーが投稿したコンテンツは他のユーザーに表示される場合があります。完全な削除を希望する場合は、退会前に個別に削除する必要があります。</p>
-          </div>
-        </section>
-
-        <section>
-          <h3 className="text-xl font-semibold text-gray-900 mb-4">第11条（保証の否認および免責事項）</h3>
-          <div className="text-gray-700 space-y-3">
-            <p>開発者は、本サービスに事実上または法律上の瑕疵（安全性、信頼性、正確性、完全性、有効性、特定の目的への適合性、セキュリティなどに関する欠陥、エラーやバグ、権利侵害などを含みます。）がないことを明示的にも黙示的にも保証しておりません。</p>
-            <p>開発者は、本サービスに起因してユーザーに生じたあらゆる損害について、開発者の故意又は重過失による場合を除き、一切の責任を負いません。ただし、本サービスに関する開発者とユーザーとの間の契約（本規約を含みます。）が消費者契約法に定める消費者契約となる場合、この免責規定は適用されません。</p>
-            <p>前項ただし書に定める場合であっても、開発者は、過失（重過失を除きます。）による債務不履行または不法行為によりユーザーに生じた損害のうち特別な事情から生じた損害（開発者またはユーザーが損害発生につき予見し、または予見し得た場合を含みます。）について一切の責任を負いません。また、開発者の過失（重過失を除きます。）による債務不履行または不法行為によりユーザーに生じた損害の賠償は、ユーザーから当該損害が発生した月に受領した利用料の額を上限とします。</p>
-            <p>開発者は、本サービスに関して、ユーザーと他のユーザーまたは第三者との間において生じた取引、連絡または紛争等について一切責任を負いません。</p>
-          </div>
-        </section>
-
-        <section>
-          <h3 className="text-xl font-semibold text-gray-900 mb-4">第12条（サービス内容の変更等）</h3>
-          <div className="text-gray-700 space-y-3">
-            <p>開発者は、ユーザーへの事前の告知をもって、本サービスの内容を変更、追加または廃止することがあり、ユーザーはこれを承諾するものとします。</p>
-            <p>重要な変更については、可能な限り事前に十分な期間をもってユーザーに通知します。</p>
-          </div>
-        </section>
-
-        <section>
-          <h3 className="text-xl font-semibold text-gray-900 mb-4">第13条（利用規約の変更）</h3>
-          <div className="text-gray-700 space-y-3">
-            <p>開発者は以下の場合には、ユーザーの個別の同意を要することなく、本規約を変更することができるものとします。</p>
-            <ul className="list-disc pl-6 space-y-1">
-              <li>本規約の変更がユーザーの一般の利益に適合するとき。</li>
-              <li>本規約の変更が本サービス利用契約の目的に反せず、かつ、変更の必要性、変更後の内容の相当性その他の変更に係る事情に照らして合理的なものであるとき。</li>
-            </ul>
-            <p>開発者はユーザーに対し、前項による本規約の変更にあたり、事前に、本規約を変更する旨および変更後の本規約の内容並びにその効力発生時期を通知します。</p>
-            <p>変更後の利用規約は、アプリ内での通知または当サイトでの告知により効力を生じるものとします。</p>
-          </div>
-        </section>
-
-        <section>
-          <h3 className="text-xl font-semibold text-gray-900 mb-4">第14条（個人情報の取扱い）</h3>
-          <div className="text-gray-700 space-y-3">
-            <p>開発者は、本サービスの利用によって取得する個人情報については、開発者「プライバシーポリシー」に従い適切に取り扱うものとします。</p>
-            <p>プライバシーポリシーの詳細については、別途定める「プライバシーポリシー」をご確認ください。</p>
-          </div>
-        </section>
-
-        <section>
-          <h3 className="text-xl font-semibold text-gray-900 mb-4">第15条（通知または連絡）</h3>
-          <div className="text-gray-700 space-y-3">
-            <p>ユーザーと開発者との間の通知または連絡は、開発者の定める方法によって行うものとします。</p>
-            <p>開発者は、ユーザーから、開発者が別途定める方式に従った変更届け出がない限り、現在登録されている連絡先が有効なものとみなして当該連絡先へ通知または連絡を行い、これらは、発信時にユーザーへ到達したものとみなします。</p>
-          </div>
-        </section>
-
-        <section>
-          <h3 className="text-xl font-semibold text-gray-900 mb-4">第16条（権利義務の譲渡の禁止）</h3>
-          <div className="text-gray-700 space-y-3">
-            <p>ユーザーは、開発者の書面による事前の承諾なく、利用契約上の地位または本規約に基づく権利もしくは義務を第三者に譲渡し、または担保に供することはできません。</p>
-          </div>
-        </section>
-
-        <section>
-          <h3 className="text-xl font-semibold text-gray-900 mb-4">第17条（適用法・管轄裁判所）</h3>
-          <div className="text-gray-700 space-y-3">
-            <p>本規約の解釈にあたっては、日本法を適用するものとします。</p>
-            <p>本サービスに関して紛争が生じた場合には、開発者の所在地を管轄する裁判所を専属的合意管轄とします。</p>
-          </div>
-        </section>
-
-        <section>
-          <h3 className="text-xl font-semibold text-gray-900 mb-4">第18条（分離可能性）</h3>
-          <div className="text-gray-700 space-y-3">
-            <p>本規約のいずれかの条項またはその一部が無効または執行不能と判断された場合であっても、そのことは他の規定の有効性に影響を与えないものとします。</p>
-          </div>
-        </section>
-
-        <div className="mt-12 pt-8 border-t border-gray-200 text-sm text-gray-600">
-          <p><strong>制定日:</strong> 2025年9月11日</p>
-          <p><strong>最終更新:</strong> 2025年9月11日</p>
-          <p><strong>バージョン:</strong> 1.0</p>
-        </div>
-      </div>
+        <Box mt={12} pt={8}>
+          <Box borderTopWidth="1px" borderColor="gray.200" pt={8}>
+            <VStack align="flex-start" gap={1} fontSize="sm" color="gray.600">
+              <Text><Text as="strong">制定日:</Text> 2025年9月11日</Text>
+              <Text><Text as="strong">最終更新:</Text> 2025年9月11日</Text>
+              <Text><Text as="strong">バージョン:</Text> 1.0</Text>
+            </VStack>
+          </Box>
+        </Box>
+      </VStack>
     </LegalLayout>
   );
 }

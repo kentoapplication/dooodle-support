@@ -1,33 +1,44 @@
+import { Box, Container, Flex, Link, HStack } from '@chakra-ui/react';
 import { Logo } from '../ui/Logo';
 
 export function Header() {
   return (
-    <header className="bg-white shadow-sm">
-      <div className="max-w-6xl mx-auto px-4 py-6">
-        <div className="flex items-center justify-between">
+    <Box as="header" bg="white" boxShadow="sm">
+      <Container maxW="6xl" py={6}>
+        <Flex align="center" justify="space-between">
           <Logo size="lg" />
-          <nav className="hidden md:flex space-x-6">
-            <a 
-              href="#features" 
-              className="text-gray-600 hover:text-purple-600 transition-colors"
+          <HStack
+            as="nav"
+            gap={6}
+            display={{ base: 'none', md: 'flex' }}
+          >
+            <Link
+              href="#features"
+              color="gray.600"
+              _hover={{ color: 'purple.600' }}
+              transition="colors 0.2s"
             >
               機能
-            </a>
-            <a 
-              href="#download" 
-              className="text-gray-600 hover:text-purple-600 transition-colors"
+            </Link>
+            <Link
+              href="#download"
+              color="gray.600"
+              _hover={{ color: 'purple.600' }}
+              transition="colors 0.2s"
             >
               ダウンロード
-            </a>
-            <a 
-              href="#support" 
-              className="text-gray-600 hover:text-purple-600 transition-colors"
+            </Link>
+            <Link
+              href="#support"
+              color="gray.600"
+              _hover={{ color: 'purple.600' }}
+              transition="colors 0.2s"
             >
               サポート
-            </a>
-          </nav>
-        </div>
-      </div>
-    </header>
+            </Link>
+          </HStack>
+        </Flex>
+      </Container>
+    </Box>
   );
 }

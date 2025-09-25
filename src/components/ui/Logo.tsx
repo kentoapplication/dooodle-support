@@ -1,21 +1,17 @@
-export function Logo({ size = 'md' }: { size?: 'sm' | 'md' | 'lg' }) {
-  const sizeClasses = {
-    sm: 'w-8 h-8',
-    md: 'w-10 h-10',
-    lg: 'w-12 h-12'
-  };
+import { Flex, Heading } from '@chakra-ui/react';
 
-  const textSizeClasses = {
-    sm: 'text-lg',
-    md: 'text-xl',
-    lg: 'text-2xl'
-  };
+export function Logo({ size = 'md' }: { size?: 'sm' | 'md' | 'lg' }) {
+  const textSizes = {
+    sm: 'lg',
+    md: 'xl',
+    lg: '2xl'
+  } as const;
 
   return (
-    <div className="flex items-center space-x-3">
-      <h1 className={`${textSizeClasses[size]} font-bold `}>
+    <Flex align="center" gap={3}>
+      <Heading as="h1" size={textSizes[size]} fontWeight="bold">
         DOOODLE
-      </h1>
-    </div>
+      </Heading>
+    </Flex>
   );
 }

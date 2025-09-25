@@ -1,26 +1,37 @@
+import { Box, Container, Heading, Text, Flex } from '@chakra-ui/react';
 import { Button } from '../ui/Button';
 import { Section } from '../ui/Section';
 
 export function DownloadSection() {
   return (
     <Section id="download" background="white">
-      <div className="max-w-4xl mx-auto text-center">
-        <h3 className="text-3xl font-bold mb-6 text-gray-900">
-          今すぐダウンロード
-        </h3>
-        <p className="text-xl text-gray-600 mb-8">
-          iOS 15.0以降のiPhoneでご利用いただけます
-        </p>
-        <Button
-          href="https://apps.apple.com/app/dooodle"
-          target="_blank"
-          rel="noopener noreferrer"
-          size="lg"
-        >
-          <span className="mr-2">📱</span>
-          App Storeでダウンロード
-        </Button>
-      </div>
+      <Container maxW="4xl">
+        <Box textAlign="center">
+          <Heading
+            as="h3"
+            fontSize="3xl"
+            fontWeight="bold"
+            mb={6}
+            color="gray.900"
+          >
+            今すぐダウンロード
+          </Heading>
+          <Text fontSize="xl" color="gray.600" mb={8}>
+            iOS 15.0以降のiPhoneでご利用いただけます
+          </Text>
+          <Button
+            href="https://apps.apple.com/app/dooodle"
+            target="_blank"
+            rel="noopener noreferrer"
+            size="lg"
+          >
+            <Flex align="center" gap={2}>
+              <Text>📱</Text>
+              <Text>App Storeでダウンロード</Text>
+            </Flex>
+          </Button>
+        </Box>
+      </Container>
     </Section>
   );
 }

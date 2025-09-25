@@ -1,3 +1,4 @@
+import { Box, Container, Flex, Link } from '@chakra-ui/react';
 import { Logo } from '../ui/Logo';
 
 interface LegalHeaderProps {
@@ -6,18 +7,21 @@ interface LegalHeaderProps {
 
 export function LegalHeader({ title }: LegalHeaderProps) {
   return (
-    <header className="bg-white shadow-sm">
-      <div className="max-w-4xl mx-auto px-4 py-6">
-        <div className="flex items-center justify-between">
+    <Box as="header" bg="white" boxShadow="sm">
+      <Container maxW="4xl" py={6}>
+        <Flex align="center" justify="space-between">
           <Logo />
-          <a
+          <Link
             href="/"
-            className="text-purple-600 hover:text-purple-700 font-medium transition-colors"
+            color="purple.600"
+            _hover={{ color: 'purple.700' }}
+            fontWeight="medium"
+            transition="colors 0.2s"
           >
             ← ホームに戻る
-          </a>
-        </div>
-      </div>
-    </header>
+          </Link>
+        </Flex>
+      </Container>
+    </Box>
   );
 }

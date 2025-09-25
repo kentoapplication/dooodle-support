@@ -1,3 +1,4 @@
+import { Box, Container, Grid, Heading, Text } from '@chakra-ui/react';
 import { Card } from '../ui/Card';
 import { Section } from '../ui/Section';
 
@@ -22,24 +23,39 @@ export function FeatureSection() {
 
   return (
     <Section id="features" background="white">
-      <div className="max-w-6xl mx-auto">
-        <h3 className="text-3xl font-bold text-center mb-12 text-gray-900">
+      <Container maxW="6xl">
+        <Heading
+          as="h3"
+          fontSize="3xl"
+          fontWeight="bold"
+          textAlign="center"
+          mb={12}
+          color="gray.900"
+        >
           主な機能
-        </h3>
-        <div className="grid md:grid-cols-3 gap-8">
+        </Heading>
+        <Grid templateColumns={{ base: '1fr', md: 'repeat(3, 1fr)' }} gap={8}>
           {features.map((feature, index) => (
-            <Card key={index} className="p-8 text-center">
-              <div className="text-4xl mb-4">{feature.icon}</div>
-              <h4 className="text-xl font-semibold mb-4 text-gray-900">
-                {feature.title}
-              </h4>
-              <p className="text-gray-600">
-                {feature.description}
-              </p>
+            <Card key={index}>
+              <Box p={8} textAlign="center">
+                <Text fontSize="4xl" mb={4}>{feature.icon}</Text>
+                <Heading
+                  as="h4"
+                  fontSize="xl"
+                  fontWeight="semibold"
+                  mb={4}
+                  color="gray.900"
+                >
+                  {feature.title}
+                </Heading>
+                <Text color="gray.600">
+                  {feature.description}
+                </Text>
+              </Box>
             </Card>
           ))}
-        </div>
-      </div>
+        </Grid>
+      </Container>
     </Section>
   );
 }
