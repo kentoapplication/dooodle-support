@@ -28,7 +28,7 @@ export function HeroSection() {
             落書きを描いて友達と共有。ウィジェットで友達の作品をリアルタイムにチェック！
           </Text>
           <Button
-            href="https://apps.apple.com/app/dooodle"
+            href="https://apps.apple.com/jp/app/dooodle/id6745752847"
             target="_blank"
             rel="noopener noreferrer"
             size="lg"

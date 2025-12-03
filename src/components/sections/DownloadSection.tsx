@@ -20,7 +20,7 @@ export function DownloadSection() {
             iOS 18.2以降のiPhoneでご利用いただけます
           </Text>
           <Button
-            href="https://apps.apple.com/app/dooodle"
+            href="https://apps.apple.com/jp/app/dooodle/id6745752847"
             target="_blank"
             rel="noopener noreferrer"
             size="lg"
